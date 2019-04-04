@@ -1,0 +1,363 @@
+@import "variables"
+
+*
+  margin: 0
+  padding: 0
+
+.content
+  width: 1000px
+  margin: 0 auto
+
+.header
+  height: 100px
+  display: flex
+  flex-direction: column
+  margin-top: 33px
+  margin-bottom: 30px
+  position: relative
+  &_elements
+    display: flex
+    justify-content: space-between
+    &_flex
+      display: flex
+
+.logotype
+  height: 64px
+  margin-right: 44px
+  justify-content: center
+  &_link
+    text-decoration: none
+  &_p
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.813rem
+    font-weight: 400
+
+.contacts
+  display: flex
+  justify-content: flex-end
+  align-items: flex-end
+  &_phone
+    color: $grey_text
+    font-family: "Arial MT"
+    font-size: 0.75rem
+    line-height: 0.75rem
+    font-weight: 400
+    margin-right: 10px
+    &_big
+      font-family: "Arial MT"
+      font-size: 1.5rem
+      font-weight: 400
+  &_email
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.75rem
+    font-style: italic
+
+.autorization
+  width: 220px
+  height: 105px
+  display: flex
+  flex-direction: column
+  background-color: $bg_yellow
+  padding-top: 14px
+  padding-left: 37px
+  border-bottom-left-radius: 30px
+  position: absolute
+  top: -33px
+  right: 0
+  &_h
+    color: $grey_text
+    font-family: Georgia
+    font-size: 1rem
+    font-family: "Georgia - Bold"
+    font-weight: 700
+    margin-bottom: 20px
+  &_link
+    color: $grey_text
+    font-family: Georgia
+    font-size: 14px
+    font-style: italic
+    text-decoration: underline
+    font-family: "Georgia - Bold"
+    font-weight: 700
+
+.main-menu
+  margin-top: 32px
+  &_ul
+    display: flex
+    list-style: none
+  &_li
+    margin-right: 15px
+    &:last-of-type
+      margin-right: 0
+  &_link
+    color: $grey_text
+    font-family: Georgia
+    font-size: 1rem
+    font-style: italic
+    line-height: 0.9rem
+    text-decoration: underline
+
+.main
+  display: flex
+
+.left-side
+  margin-right: 21px
+
+.request
+  display: flex
+  flex-direction: column
+  width: 220px
+  background-color: $bg_yellow
+  border-top-right-radius: 35px
+  box-sizing: border-box
+  margin-bottom: 20px
+  &_h
+    height: 41px
+    color: $white_text
+    font-family: Georgia
+    font-size: 1.125rem
+    font-weight: 400
+    background: linear-gradient(to top, #5cbb10 0%, #5cbb10 1%, #77cd11 100%)
+    display: flex
+    align-items: center
+    border-top-right-radius: 35px
+    padding-left: 23px
+    margin-bottom: 23px
+  &_link
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.75rem
+    font-style: italic
+    line-height: 1.125rem
+    text-decoration: underline
+    padding-left: 23px
+
+.search_form
+  padding-left: 20px
+  margin-top: 70px
+  margin-bottom: 13px
+  display: flex
+  align-items: center
+  &_input
+    width: 163px
+    height: 19px
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.688rem
+    font-weight: 400
+    padding: 0 5px
+    box-sizing: border-box
+  &_button
+    width: 24px
+    height: 21px
+    background-image: url(../img/search.png)
+    border: none
+    background-color: transparent
+
+.links-block
+  width: 220px
+  margin-bottom: 40px
+  &_link
+    text-decoration: none
+  &_element
+    height: 100px
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    &:hover .links-block_element_p
+      color: $green_text
+    &_p
+      color: $dark_grey_text
+      font-family: Georgia
+      font-size: 0.75rem
+      font-style: italic
+      margin-left: 84px
+      background-color: $white_text
+      padding: 3px
+
+.consultation
+  background: url(../img/left_icon_cons.jpg) no-repeat
+  &:hover
+    background: url(../img/left_icon_cons_hover.jpg) no-repeat
+
+.feedback
+  background: url(../img/left_icon_feedback.jpg) no-repeat
+  &:hover
+    background: url(../img/left_icon_feedback_hover.jpg) no-repeat
+
+.faq
+  background: url(../img/left_icon_faq.jpg) no-repeat
+  &:hover
+    background: url(../img/left_icon_faq_hover.jpg) no-repeat
+
+.rating
+  background: url(../img/left_icon_rating.jpg) no-repeat -5px -5px
+
+.exchange-rates
+  background-color: $bg_yellow
+  width: 212px
+  height: 130px
+  padding: 10px
+  border-bottom-left-radius: 30px
+  &_h
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.875rem
+    font-weight: 700
+    margin-bottom: 10px
+
+.exchange-rates_table
+  margin-left: 10px
+  border-collapse: collapse
+  td
+    width: 55px
+    padding: 5px
+  &_first
+    width: 70px
+    display: flex
+    justify-content: space-between
+  &_header
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.75rem
+    font-weight: 400
+
+.big-banner
+  width: 760px
+  height: 303px
+  background: url(../img/bunner.png) no-repeat 0px -118px, linear-gradient(to top, #249901 0%, #249901 1%, #77cd11 100%)
+  border-top-left-radius: 30px
+  position: relative
+  padding-top: 100px
+  padding-left: 366px
+  box-sizing: border-box
+  margin-bottom: 20px
+  &_menu
+    outline: 1px solid red
+    width: 100%
+    height: 41px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    list-style: none
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $bg_dark_green
+    opacity: 0.7
+    border-top-left-radius: 30px
+    &_li
+      &:hover
+    &_link
+      color: $white_text
+      font-family: Georgia
+      font-size: 1.125rem
+      font-weight: 400
+      text-decoration: none
+  &_p
+    color: #c3ff68
+    font-family: Georgia
+    font-size: 1.375rem
+    font-weight: 400
+    &_big
+      opacity: 0.37
+      color: #fff3ae
+      font-family: "Arial"
+      font-size: 3.5rem
+      line-height: 3rem
+      font-weight: bold
+      margin-bottom: 10px
+
+.small-banners
+  width: 760px
+  height: 175px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  background-image: linear-gradient(to top, #249901 0%, #249901 1%, #77cd11 100%)
+  border-bottom-right-radius: 40px
+  margin-bottom: 27px
+  &_element
+    margin: 0 26px
+    &_img
+      width: 90px
+      height: 97px
+    &_p
+      color: $white_text
+      font-family: Georgia
+      font-size: 0.75rem
+      font-weight: 400
+      &_modify
+        color: #c3ff68
+        font-family: Georgia
+        font-size: 0.875rem
+        font-weight: 700
+
+.news
+  margin-bottom: 40px
+  &_item
+    display: flex
+    margin-bottom: 20px
+    &_link
+      text-decoration: none
+    &_h
+      color: $grey_text
+      font-family: Georgia
+      font-size: 1.375rem
+      font-style: italic
+      font-weight: 400
+      text-decoration: underline
+      margin-bottom: 10px
+    &_img
+      width: 160px
+      height: 160px
+      margin-right: 20px
+    &_p
+      color: $grey_text
+      font-family: Georgia
+      font-size: 0.75rem
+      font-weight: 400
+      margin-bottom: 10px
+  &_hidden
+    display: flex
+    margin-bottom: 10px
+    &_date
+      color: $grey_text
+      font-family: "Arial"
+      font-size: 0.75rem
+      font-style: italic
+      margin-right: 10px
+    &_link
+      color: #8b8d8d
+      font-size: 0.75rem
+      font-family: Georgia
+      font-style: italic
+
+.partners
+  width: 760px
+  height: 130px
+  background-color: $bg_yellow
+  &_h
+    color: $grey_text
+    font-family: Georgia
+    font-size: 0.875rem
+    font-weight: 700
+    padding: 10px
+  &_carousel
+    display: flex
+    justify-content: space-around
+    margin-top: 10px
+    &_arrow
+      display: block
+      width: 22px
+      height: 38px
+    &_img
+      margin: 0 15px
+
+.left
+  background: url(../img/arrow_carousel.png) no-repeat
+.right
+  background: url(../img/arrow_carousel.png) no-repeat
+  transform: rotate(180deg)
