@@ -3,13 +3,14 @@
 *
   margin: 0
   padding: 0
+  box-sizing: border-box
 
 .content
   width: 1000px
   margin: 0 auto
 
 .header
-  height: 100px
+  height: 112px
   display: flex
   flex-direction: column
   margin-top: 33px
@@ -101,6 +102,9 @@
 
 .main
   display: flex
+  padding-bottom: 40px
+  margin-bottom: 19px
+  border-bottom: 1px solid $dark_grey_text
 
 .left-side
   margin-right: 21px
@@ -111,7 +115,6 @@
   width: 220px
   background-color: $bg_yellow
   border-top-right-radius: 35px
-  box-sizing: border-box
   margin-bottom: 20px
   &_h
     height: 41px
@@ -197,9 +200,11 @@
 
 .exchange-rates
   background-color: $bg_yellow
-  width: 212px
+  width: 220px
   height: 130px
+  margin: 10px 0
   padding: 10px
+  box-sizing: border-box
   border-bottom-left-radius: 30px
   &_h
     color: $grey_text
@@ -235,7 +240,6 @@
   box-sizing: border-box
   margin-bottom: 20px
   &_menu
-    outline: 1px solid red
     width: 100%
     height: 41px
     display: flex
@@ -246,7 +250,6 @@
     top: 0
     left: 0
     background-color: $bg_dark_green
-    opacity: 0.7
     border-top-left-radius: 30px
     &_li
       &:hover
@@ -256,6 +259,8 @@
       font-size: 1.125rem
       font-weight: 400
       text-decoration: none
+      position: relative
+      z-index: 10
   &_p
     color: #c3ff68
     font-family: Georgia
@@ -270,13 +275,77 @@
       font-weight: bold
       margin-bottom: 10px
 
+.drop_menu
+  display: none
+  align-items: flex-start
+  flex-wrap: wrap
+  width: 760px
+  height: 90px
+  background-color: rgba(67, 120, 8, 0.9)
+  list-style: none
+  position: absolute
+  top: 41px
+  left: 0
+  padding: 11px 29px
+  &_li
+    height: 24px
+    margin-right: 20px
+  &_link
+    color: #c8ef8c
+    font-family: Arial
+    font-style: italic
+    font-size: 0.75rem
+    font-weight: 400
+    text-decoration: underline
+    opacity: 1.0
+
+.private-clients_li:hover .private-clients
+  display: flex
+.private-clients::before
+  content: ""
+  width: 242px
+  height: 41px
+  background-color: rgba(67, 120, 8, 0.9)
+  position: absolute
+  top: -41px
+  left: 0
+  border-top-left-radius: 30px
+  border-top-right-radius: 30px
+
+.small-business_li:hover .small-business
+  display: flex
+.small-business::before
+  content: ""
+  width: 242px
+  height: 41px
+  background-color: rgba(67, 120, 8, 0.9)
+  position: absolute
+  top: -41px
+  left: 241px
+  border-top-left-radius: 30px
+  border-top-right-radius: 30px
+
+.corporate-clients_li:hover .corporate-clients
+  display: flex
+.corporate-clients::before
+  content: ""
+  width: 289px
+  height: 41px
+  background-color: $bg_dark_green
+  position: absolute
+  top: -41px
+  left: 471px
+  border-top-left-radius: 30px
+  border-top-right-radius: 0
+
+
 .small-banners
   width: 760px
   height: 175px
   display: flex
   justify-content: space-around
   align-items: center
-  background-image: linear-gradient(to top, #249901 0%, #249901 1%, #77cd11 100%)
+  background: linear-gradient(to top, #249901 0%, #249901 1%, #77cd11 100%)
   border-bottom-right-radius: 40px
   margin-bottom: 27px
   &_element
@@ -296,7 +365,7 @@
         font-weight: 700
 
 .news
-  margin-bottom: 40px
+  margin-bottom: 30px
   &_item
     display: flex
     margin-bottom: 20px
@@ -339,6 +408,7 @@
   width: 760px
   height: 130px
   background-color: $bg_yellow
+  border-bottom-right-radius: 30px
   &_h
     color: $grey_text
     font-family: Georgia
@@ -361,3 +431,74 @@
 .right
   background: url(../img/arrow_carousel.png) no-repeat
   transform: rotate(180deg)
+
+.footer
+  display: flex
+  margin-bottom: 20px
+  &_left-side
+    height: 100px
+    width: 212px
+    display: flex
+    align-items: flex-end
+    margin-right: 28px
+  &_main
+    width: 760px
+    display: flex
+    flex-direction: column
+  &_menu
+    width: 100%
+    margin-bottom: 60px
+    &_ul
+      width: 100%
+      display: flex
+      justify-content: space-between
+      list-style: none
+    &_li
+    &_link
+      color: $grey_text
+      font-family: Georgia
+      font-size: 0.875rem
+      font-style: italic
+      text-decoration: underline
+  &_bottom
+    display: flex
+    justify-content: space-between
+    &_address
+      color: $grey_text
+      font-family: Arial
+      font-size: 0.688rem
+      font-weight: 400
+    &_contacts
+      &_phones
+        color: $grey_text
+        font-family: Arial
+        font-size: 0.688rem
+        font-weight: 400
+      &_email
+        color: $grey_text
+        font-family: Arial
+        font-size: 0.688rem
+        font-weight: 400
+        font-style: italic
+        text-decoration: underline
+    &_copyright
+      color: #595b5b
+      font-family: "Arial MT"
+      font-size: 0.688rem
+      font-weight: 400
+      &_modify
+        font-style: italic
+        text-decoration: underline
+
+.insurance
+  width: 100px
+  height: 94px
+  margin-right: 9px
+
+.license
+  color: #595b5b
+  font-family: Arial
+  font-size: 0.688rem
+  font-weight: 400
+
+
